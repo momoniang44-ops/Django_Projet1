@@ -1,0 +1,28 @@
+{% extends 'monapp/base.html' %}
+
+{% block title %}Accueil - Mon Site Django{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>{{ titre }}</h1>
+    <p class="lead">{{ message }}</p>
+</section>
+
+<section class="features">
+    <h2>Mes Services</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>Developpement Web</h3>
+            <p>Je cree des sites web modernes et performants.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Design UX/UI</h3>
+            <p>Des interfaces utilisateur intuitives et elegantes.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Hebergement</h3>
+            <p>Solutions d'hebergement fiables et securisees.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

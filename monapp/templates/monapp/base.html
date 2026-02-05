@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Site Django{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'monapp/css/styles.css' %}">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'monapp:accueil' %}">MonSite</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'monapp:accueil' %}">Accueil</a></li>
+                <li><a href="{% url 'monapp:a_propos' %}">A propos</a></li>
+                <li><a href="{% url 'monapp:contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2025 MonSite Django - Tous droits reserves</p>
+    </footer>
+</body>
+</html>

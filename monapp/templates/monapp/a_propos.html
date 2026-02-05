@@ -1,0 +1,31 @@
+{% extends 'monapp/base.html' %}
+{% load static %}
+
+{% block title %}A propos - Mon Site Django{% endblock %}
+
+{% block content %}
+<section class="about">
+    <h1>{{ titre }}</h1>
+    
+    <div class="about-content">
+        <div class="about-text">
+            <p>{{ description }}</p>
+            <p>Ma mission est de fournir des solutions web innovantes et accessibles a tous.</p>
+            <p>*j'aide de nombreuses entreprises a developper leur presence en ligne.</p>
+        </div>
+        
+        <div class="about-image">
+            <img src="{% static 'monapp/images/equipe.jpg' %}" alt="Notre equipe">
+        </div>
+    </div>
+</section>
+
+<section class="values">
+    <h2>Mes Valeurs</h2>
+    <ul>
+        <li><strong>Innovation</strong> - Toujours a la pointe de la technologie</li>
+        <li><strong>Qualite</strong> - Un code propre et maintenable</li>
+        <li><strong>Collaboration</strong> - Travailler ensemble pour reussir</li>
+    </ul>
+</section>
+{% endblock %}
